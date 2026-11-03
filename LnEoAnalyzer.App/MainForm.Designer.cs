@@ -234,7 +234,7 @@ namespace LnEoAnalyzer
             lblTitle.Padding = new Padding(8, 0, 0, 0);
             lblTitle.Size = new Size(420, 32);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "LiNbO3 전기-광학 특성 분석 (반파장 전압 · 전기광학 계수)";
+            lblTitle.Text = "LiNbO3 전기-광학 특성 분석 (반파장 전압 · 전기-광학 계수)";
             lblTitle.TextAlign = ContentAlignment.MiddleLeft;
             lblTitle.MouseDown += panelTitleBar_MouseDown;
             //

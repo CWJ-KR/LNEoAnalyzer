@@ -3,7 +3,7 @@ using LnEoAnalyzer.Core;
 
 namespace LnEoAnalyzer.Views
 {
-    /// <summary>결과 기록 화면: 측정 조건별 피팅 결과 + 전기광학 계수 (PPT 4번 슬라이드 표와 같은 항목)</summary>
+    /// <summary>결과 기록 화면: 측정 조건별 피팅 결과 + 전기-광학 계수 (PPT 4번 슬라이드 표와 같은 항목)</summary>
     public partial class ucResults : UserControl
     {
         private AppState? _state;

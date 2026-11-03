@@ -63,7 +63,7 @@ public sealed class AnalysisSettings
     public AnalysisSettings Clone() => (AnalysisSettings)MemberwiseClone();
 }
 
-/// <summary>결과 기록표의 한 행 (PPT 결과표와 같은 항목 + 전기광학 계수)</summary>
+/// <summary>결과 기록표의 한 행 (PPT 결과표와 같은 항목 + 전기-광학 계수)</summary>
 public sealed class ResultRecord
 {
     public DateTime Time { get; set; }
@@ -147,7 +147,7 @@ public static class CsvExport
 
     /// <summary>
     /// 측정 CSV 저장.
-    ///  - 맨 위 '#' 줄: 측정 조건, 피팅 파라미터, 전기광학 계수
+    ///  - 맨 위 '#' 줄: 측정 조건, 피팅 파라미터, 전기-광학 계수
     ///  - 표: 측정점 열 + 각 점의 피팅값/잔차 열 + 피팅 곡선(라인) 열 (Fit curve V, Fit curve Optical)
     ///    피팅 곡선은 그래프에 그린 것과 같은 범위·점 수이며, 측정점보다 행이 많으면 측정점 열은 비워 둡니다.
     /// </summary>

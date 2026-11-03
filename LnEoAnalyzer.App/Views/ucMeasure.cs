@@ -13,7 +13,7 @@ namespace LnEoAnalyzer.Views
     /// 반파장 전압 측정 화면
     ///  1) 설정한 범위/간격으로 전압을 바꾸며 광검출기 신호를 측정 (실시간 그래프)
     ///  2) 측정이 모두 끝난 뒤 y = y0 + A·sin(π(x−xc)/w) 로 1회 피팅 → w = Vπ
-    ///  3) r = λd/(n³LVπ) 로 전기광학 계수 계산
+    ///  3) r = λd/(n³LVπ) 로 전기-광학 계수 계산
     /// </summary>
     public partial class ucMeasure : UserControl
     {
@@ -579,7 +579,7 @@ namespace LnEoAnalyzer.Views
         }
 
         // =====================================================================
-        //  피팅 / 전기광학 계수
+        //  피팅 / 전기-광학 계수
         // =====================================================================
         private void RunFit(bool logResult)
         {
@@ -606,7 +606,7 @@ namespace LnEoAnalyzer.Views
                     fit.W, fit.WErr, fit.Y0, fit.Y0Err, fit.Xc, fit.XcErr, fit.A, fit.AErr, fit.ReducedChiSq, fit.AdjRSquare));
                 foreach (var w in fit.Warnings) Log("  주의: " + w);
                 if (_lastEo != null && _lastEo.Valid)
-                    Log(string.Format(Num.Inv, "전기광학 계수: r = {0:0.0000} ± {1:0.0000} pm/V", _lastEo.RPmPerV, _lastEo.RErrPmPerV));
+                    Log(string.Format(Num.Inv, "전기-광학 계수: r = {0:0.0000} ± {1:0.0000} pm/V", _lastEo.RPmPerV, _lastEo.RErrPmPerV));
             }
             else Log("피팅 실패: " + fit.Message);
         }

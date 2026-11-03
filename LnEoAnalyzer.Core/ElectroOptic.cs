@@ -3,7 +3,7 @@ using System;
 namespace LnEoAnalyzer.Core;
 
 /// <summary>
-/// 반파장 전압 → 전기광학 계수:  r = λ·d / (n³·L·Vπ)
+/// 반파장 전압 → 전기-광학 계수:  r = λ·d / (n³·L·Vπ)
 ///   λ : 레이저 파장, d : 전극 사이 거리, n : 해당 파장에서 LN 굴절률,
 ///   L : 레이저 진행 방향 LN 길이, Vπ : 반파장 전압 (= 사인 피팅의 w)
 /// 단위: λ[nm], d[mm], L[mm], Vπ[kV] 를 넣으면 r[pm/V] = λ·d / (n³·L·Vπ) 가 그대로 성립합니다.
@@ -25,7 +25,7 @@ public static class ElectroOptic
     {
         public bool Valid { get; set; }
         public string Message { get; set; } = "";
-        /// <summary>전기광학 계수 (pm/V)</summary>
+        /// <summary>전기-광학 계수 (pm/V)</summary>
         public double RPmPerV { get; set; } = double.NaN;
         /// <summary>Vπ 표준오차만 전파한 r 의 오차 (pm/V)</summary>
         public double RErrPmPerV { get; set; } = double.NaN;

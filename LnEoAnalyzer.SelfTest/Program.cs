@@ -1,7 +1,7 @@
 // LnEoAnalyzer 자체 검증 프로그램
 //  1) 수동 측정 엑셀 데이터(LN 반파장 전압 측정_20260909.xlsx)를 피팅해 PPT 4번 슬라이드의 Origin 결과와 비교
 //  2) 데모(가상) 장비로 -1 ~ +1 kV 스캔 → 소요 시간 / 피팅 결과 확인
-//  3) 스캔 계획(왕복/반복), 출력 제한, 전기광학 계수 계산 확인
+//  3) 스캔 계획(왕복/반복), 출력 제한, 전기-광학 계수 계산 확인
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -157,7 +157,7 @@ Console.WriteLine("== 5. 데모 장비 스캔 (-1 ~ +1 kV, 0.1 kV, 안정화 50 
 }
 
 Console.WriteLine();
-Console.WriteLine("== 6. 전기광학 계수 r = λd/(n³LVπ) ==");
+Console.WriteLine("== 6. 전기-광학 계수 r = λd/(n³LVπ) ==");
 {
     var o = ElectroOptic.Compute(new ElectroOptic.Input { WavelengthNm = 1310, ElectrodeGapMm = 1, LengthMm = 10, RefractiveIndex = 2.2, VpiKv = 2.0, VpiErrKv = 0.02 });
     double expect = 1310e-9 * 1e-3 / (Math.Pow(2.2, 3) * 10e-3 * 2000) * 1e12;

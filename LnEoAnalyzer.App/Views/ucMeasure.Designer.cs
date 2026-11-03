@@ -411,7 +411,7 @@ namespace LnEoAnalyzer.Views
             grpEo.Name = "grpEo";
             grpEo.Padding = new Padding(6, 4, 6, 6);
             grpEo.Size = new Size(288, 250);
-            grpEo.Text = "전기광학 계수";
+            grpEo.Text = "전기-광학 계수";
             // 
             // lblR
             // 
@@ -1591,7 +1591,7 @@ namespace LnEoAnalyzer.Views
             toolTip.SetToolTip(chkExclude, "CH1 신호가 입력 레인지 끝에 닿은 점(레인지 초과·검출기 포화 의심)을 피팅에서 뺍니다.");
             toolTip.SetToolTip(nudManualKv, "광학 정렬 등을 위해 원하는 전압을 직접 출력합니다 (측정 중에는 사용할 수 없음).");
             toolTip.SetToolTip(chkLive, "측정 중이 아닐 때 광검출기 신호를 0.3초마다 표시합니다 (편광자 정렬용).");
-            toolTip.SetToolTip(btnNHelp, "굴절률 선택 도움말 (n_e / n_o, 파장별 값, 전기광학 계수별 관계식)");
+            toolTip.SetToolTip(btnNHelp, "굴절률 선택 도움말 (n_e / n_o, 파장별 값, 전기-광학 계수별 관계식)");
             ((System.ComponentModel.ISupportInitialize)nudN).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudD).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudL).EndInit();

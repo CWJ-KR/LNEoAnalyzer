@@ -3,7 +3,7 @@ using LnEoAnalyzer.Core;
 namespace LnEoAnalyzer.Views
 {
     /// <summary>
-    /// 전기광학 계수 계산용 굴절률(n_e / n_o) 선택 도움말.
+    /// 전기-광학 계수 계산용 굴절률(n_e / n_o) 선택 도움말.
     /// 현재 파장의 n_e, n_o 를 셀마이어 식으로 계산해 보여주고, [적용] 을 누르면 그 값을 굴절률 칸에 넣습니다.
     /// 본문은 IndexHelpContent.Markup 에서 수정할 수 있습니다.
     /// </summary>
