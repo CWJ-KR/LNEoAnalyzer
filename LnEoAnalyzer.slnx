@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="LnEoAnalyzer.App/LnEoAnalyzer.App.csproj" />
+  <Project Path="LnEoAnalyzer.Core/LnEoAnalyzer.Core.csproj" />
+  <Project Path="LnEoAnalyzer.SelfTest/LnEoAnalyzer.SelfTest.csproj" />
+</Solution>
